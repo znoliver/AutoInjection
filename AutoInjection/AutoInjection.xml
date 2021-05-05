@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutoInjection</name>
+    </assembly>
+    <members>
+        <member name="T:AutoInjection.InjectionType">
+            <summary>
+            注入类型
+            </summary>
+        </member>
+        <member name="F:AutoInjection.InjectionType.Transient">
+            <summary>
+            Transient
+            </summary>
+        </member>
+        <member name="F:AutoInjection.InjectionType.Scoped">
+            <summary>
+            Scoped
+            </summary>
+        </member>
+        <member name="F:AutoInjection.InjectionType.Singleton">
+            <summary>
+            Singleton
+            </summary>
+        </member>
+        <member name="T:AutoInjection.NoImplementationInterfaceException">
+            <summary>
+            未接口异常
+            </summary>
+        </member>
+        <member name="P:AutoInjection.NoImplementationInterfaceException.Message">
+            <summary>
+            异常消息
+            </summary>
+        </member>
+        <member name="M:AutoInjection.NoImplementationInterfaceException.#ctor(System.String)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="T:AutoInjection.AutoInjection">
+            <summary>
+            自动服务注入
+            </summary>
+        </member>
+        <member name="M:AutoInjection.AutoInjection.ServicesAutoInjection(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            服务自动注入
+            </summary>
+            <param name="serviceCollection">需要自动注入服务的服务集合</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">指定的注入类型不在可注入的范围内</exception>
+            <exception cref="T:AutoInjection.NoImplementationInterfaceException">指定注入的类型未实现任何服务</exception>
+            <exception cref="T:System.ArgumentException">输入的参数错误：1、注入的类型未实现指定的服务。2、指定的服务不是Interface类型</exception>
+            <returns>自动注入服务后的服务集合</returns>
+        </member>
+        <member name="M:AutoInjection.AutoInjection.ServicesAutoInjection(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.Reflection.Assembly,System.Boolean})">
+            <summary>
+            服务自动注入
+            </summary>
+            <param name="serviceCollection">需要自动注入服务的服务集合</param>
+            <param name="selector">应用于每个Assembly的筛选函数</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">指定的注入类型不在可注入的范围内</exception>
+            <exception cref="T:AutoInjection.NoImplementationInterfaceException">指定注入的类型未实现任何服务</exception>
+            <exception cref="T:System.ArgumentException">输入的参数错误：1、注入的类型未实现指定的服务。2、指定的服务不是Interface类型</exception>
+            <returns>自动注入服务后的服务集合</returns>
+        </member>
+        <member name="T:AutoInjection.ServiceInjection">
+            <summary>
+            服务注入
+            </summary>
+        </member>
+        <member name="P:AutoInjection.ServiceInjection.InterfaceType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:AutoInjection.ServiceInjection.InjectionType">
+            <summary>
+            注入类型
+            </summary>
+        </member>
+        <member name="M:AutoInjection.ServiceInjection.#ctor">
+            <summary>
+            服务注入
+            </summary>
+        </member>
+        <member name="M:AutoInjection.ServiceInjection.#ctor(AutoInjection.InjectionType)">
+            <summary>
+            服务注入
+            </summary>
+            <param name="injectionType">注入类型</param>
+        </member>
+        <member name="M:AutoInjection.ServiceInjection.#ctor(System.Type,AutoInjection.InjectionType)">
+            <summary>
+            服务注入
+            </summary>
+            <param name="interfaceType">服务的接口类型</param>
+            <param name="injectionType">注入的类型</param>
+        </member>
+    </members>
+</doc>
