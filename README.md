@@ -1,6 +1,10 @@
 # AutoInjection使用说明
 
-1. 服务配置
+1. 服务安装
+
+   通过Nuget安装：[![](https://img.shields.io/nuget/v/AutoInjection.svg)](https://www.nuget.org/packages/NuGet包的Id字符)
+
+2. 服务配置
 
    在```Startup```中的```ConfigureServices```函数中配置服务，如下所示：
 
@@ -16,7 +20,7 @@
    }
    ```
 
-2. 服务注入
+3. 服务注入
 
    配置服务的注入，在需要注入的业务类中，使用```ServiceInjectionAttribute```标记，从而实现注入：
 
@@ -27,7 +31,8 @@
    	// 业务代码
    }
    ```
-3. 接口说明
+
+4. 接口说明
    ```ServiceInjectionAttribute```有三种实现方法：
    |                         实现方法                          |                           使用说明                           |
    | :-------------------------------------------------------: | :----------------------------------------------------------: |
