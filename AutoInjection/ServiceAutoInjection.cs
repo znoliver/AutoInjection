@@ -59,7 +59,7 @@ namespace AutoInjection
         {
             foreach (var type in types)
             {
-                var attribute = type.GetCustomAttribute<ServiceInjection>();
+                var attribute = type.GetCustomAttribute<ServiceInjectionAttribute>();
                 if (attribute == null) continue;
                 if (attribute.InterfaceType == null)
                 {
@@ -71,7 +71,7 @@ namespace AutoInjection
                 {
                     var isInterface = attribute.InterfaceType.IsInterface;
                     if (!isInterface) throw new ArgumentException("指定的服务不是Interface类型。");
-                    var isRealization = type.IsAssignableFrom(attribute.InterfaceType);
+                    var isRealization = attribute.InterfaceType.IsAssignableFrom(type);
                     if (!isRealization) throw new ArgumentException("注入的类型未实现指定的服务。");
                 }
 

@@ -2,12 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Oliver</Authors>
-    <Company />
     <NeutralLanguage>zh-Hans</NeutralLanguage>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Description>基于.net5的服务自动注入帮助包</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <RepositoryUrl>https://github.com/znoliver/AutoInjection</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/znoliver/AutoInjection</PackageProjectUrl>
+    <Owers>Oliver</Owers>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

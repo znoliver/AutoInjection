@@ -6,7 +6,7 @@ namespace AutoInjection
     /// 服务注入
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class ServiceInjection : Attribute
+    public class ServiceInjectionAttribute : Attribute
     {
         /// <summary>
         /// 
@@ -21,7 +21,7 @@ namespace AutoInjection
         /// <summary>
         /// 服务注入
         /// </summary>
-        public ServiceInjection()
+        public ServiceInjectionAttribute()
         {
             this.InjectionType = InjectionType.Scoped;
         }
@@ -30,7 +30,7 @@ namespace AutoInjection
         /// 服务注入
         /// </summary>
         /// <param name="injectionType">注入类型</param>
-        public ServiceInjection(InjectionType injectionType)
+        public ServiceInjectionAttribute(InjectionType injectionType)
         {
             this.InjectionType = injectionType;
         }
@@ -40,7 +40,7 @@ namespace AutoInjection
         /// </summary>
         /// <param name="interfaceType">服务的接口类型</param>
         /// <param name="injectionType">注入的类型</param>
-        public ServiceInjection(Type interfaceType, InjectionType injectionType)
+        public ServiceInjectionAttribute(Type interfaceType, InjectionType injectionType)
         {
             this.InterfaceType = interfaceType;
             this.InjectionType = injectionType;

@@ -66,33 +66,33 @@
             <exception cref="T:System.ArgumentException">输入的参数错误：1、注入的类型未实现指定的服务。2、指定的服务不是Interface类型</exception>
             <returns>自动注入服务后的服务集合</returns>
         </member>
-        <member name="T:AutoInjection.ServiceInjection">
+        <member name="T:AutoInjection.ServiceInjectionAttribute">
             <summary>
             服务注入
             </summary>
         </member>
-        <member name="P:AutoInjection.ServiceInjection.InterfaceType">
+        <member name="P:AutoInjection.ServiceInjectionAttribute.InterfaceType">
             <summary>
             
             </summary>
         </member>
-        <member name="P:AutoInjection.ServiceInjection.InjectionType">
+        <member name="P:AutoInjection.ServiceInjectionAttribute.InjectionType">
             <summary>
             注入类型
             </summary>
         </member>
-        <member name="M:AutoInjection.ServiceInjection.#ctor">
+        <member name="M:AutoInjection.ServiceInjectionAttribute.#ctor">
             <summary>
             服务注入
             </summary>
         </member>
-        <member name="M:AutoInjection.ServiceInjection.#ctor(AutoInjection.InjectionType)">
+        <member name="M:AutoInjection.ServiceInjectionAttribute.#ctor(AutoInjection.InjectionType)">
             <summary>
             服务注入
             </summary>
             <param name="injectionType">注入类型</param>
         </member>
-        <member name="M:AutoInjection.ServiceInjection.#ctor(System.Type,AutoInjection.InjectionType)">
+        <member name="M:AutoInjection.ServiceInjectionAttribute.#ctor(System.Type,AutoInjection.InjectionType)">
             <summary>
             服务注入
             </summary>
